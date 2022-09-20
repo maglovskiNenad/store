@@ -1,0 +1,23 @@
+@mixin dots() {
+  margin-top: 0.7rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: $light_gray;
+}
+
+@mixin underline($color) {
+  a:after {
+    display: block;
+    content: "";
+    border-bottom: solid 1px $color;
+    transform: scaleX(0);
+    transition: transform 0.1s ease-in-out;
+  }
+  a:hover:after {
+    transform: scale(1);
+  }
+  a:after {
+    transform-origin: 0% 50%;
+  }
+}
